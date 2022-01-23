@@ -70,8 +70,6 @@ class App extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log("App componentDidUpdate");
-
     if (this.state.contacts !== prevState.contacts) {
       console.log("Обновилось поле contacts");
       localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
